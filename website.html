@@ -2,121 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Discover the World of Parrots</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5fff5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0fdf4;
       color: #333;
     }
     header {
-      background: #4caf50;
+      background: #2e7d32;
       color: white;
-      padding: 1rem;
+      padding: 2rem;
       text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px;
     }
     nav {
       display: flex;
       justify-content: center;
-      background: #388e3c;
+      background: #1b5e20;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
       padding: 1rem;
       text-decoration: none;
+      font-weight: bold;
     }
     nav a:hover {
-      background: #2e7d32;
+      background: #388e3c;
     }
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       padding: 2rem;
     }
-    h2 {
-      color: #2e7d32;
-    }
-    .bird {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+    .bird-section {
       margin-bottom: 3rem;
+      border-bottom: 2px solid #a5d6a7;
     }
-    .bird img {
+    .bird-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .swiper {
       width: 100%;
-      border-radius: 10px;
+      max-width: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .swiper-slide img {
+      width: 100%;
+      display: block;
+    }
+    .bird-info {
+      flex: 1;
+      min-width: 280px;
+    }
+    h2 {
+      color: #1b5e20;
     }
     footer {
       text-align: center;
       padding: 1rem;
-      background: #4caf50;
+      background: #2e7d32;
       color: white;
       margin-top: 2rem;
+      font-size: 0.9rem;
     }
     @media(max-width: 768px) {
-      .bird { grid-template-columns: 1fr; }
+      .bird-container {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Discover the World of Parrots</h1>
-  </header>
+  <div>Discover the World of Parrots</div>
+  
+</header>
 
   <nav>
     <a href="#parrot">African Grey Parrot</a>
-    <a href="#cockatoo">Sulphur-Crested Cockatoo</a>
-    <a href="#macaw">Blue Gold Macaw</a>
-    <a href="#about">About</a>
+    <a href="#cockatoo">Cockatoo</a>
+    <a href="#macaw">Macaw</a>
   </nav>
 
-  <section id="parrot" class="bird">
-    <div>
-      <h2>African Grey Parrot</h2>
-      <p><strong>Scientific Name:</strong> Psittacus erithacus</p>
-      <p><strong>Habitat:</strong> Rainforests of West and Central Africa</p>
-      <p><strong>Diet:</strong> Fruits, seeds, nuts, and berries</p>
-      <p><strong>Behavior:</strong> Known for exceptional talking ability and intelligence. Highly social and playful.</p>
-      <p><strong>Interesting Fact:</strong> Considered one of the most intelligent bird species in the world.</p>
+  <section id="parrot" class="bird-section">
+    <h2>African Grey Parrot</h2>
+    <div class="bird-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS_xh8jTqZECb0-qHIAbgloS2MEPWruHkcI9ds2xoXqUj3FaskdDZxmR1Gmf7ZFJ0qHesB1wM_LO0QOGUXmKOAxhJdCEXLScsk5_ufPYfSW9g" alt="African Grey Parrot" />
+          </div>
+        </div>
+      </div>
+      <div class="bird-info">
+        <p><strong>Scientific Name:</strong> Psittacus erithacus</p>
+        <p><strong>Physical Features:</strong> Medium-sized grey parrot with bright red tail feathers and black beak. Known for intelligent expression and sharp eyes.</p>
+        <p><strong>Distribution:</strong> Rainforests of West and Central Africa</p>
+        <p><strong>Habitat:</strong> Dense tropical rainforests and open forest edges</p>
+        <p><strong>Food:</strong> Fruits, nuts, seeds, berries, and leafy matter</p>
+        <p><strong>Social Behaviors:</strong> Highly intelligent and social; capable of mimicking human speech. Forms strong pair bonds. Nests in tree cavities; lays 3–5 eggs; incubation lasts 30 days</p>
+        <p><strong>Life span:</strong> 40–60 years (can reach up to 80 in captivity)</p>
+      </div>
     </div>
-    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS_xh8jTqZECb0-qHIAbgloS2MEPWruHkcI9ds2xoXqUj3FaskdDZxmR1Gmf7ZFJ0qHesB1wM_LO0QOGUXmKOAxhJdCEXLScsk5_ufPYfSW9g" alt="African Grey Parrot">
   </section>
 
-  <section id="cockatoo" class="bird">
-    <div>
-      <h2>Sulphur-Crested Cockatoo</h2>
-      <p><strong>Scientific Name:</strong> Cacatua galerita</p>
-      <p><strong>Habitat:</strong> Australia and nearby islands</p>
-      <p><strong>Diet:</strong> Seeds, roots, berries, and nuts</p>
-      <p><strong>Behavior:</strong> Very loud and social; often seen in flocks. Can mimic human voices and sounds.</p>
-      <p><strong>Interesting Fact:</strong> Recognized by their distinctive yellow crest, which rises when they are excited or alarmed.</p>
+  <section id="cockatoo" class="bird-section">
+    <h2>Sulphur-Crested Cockatoo</h2>
+    <div class="bird-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSzYaqAQuTvMS68f01tcioOloFeqHPqkOtcy8ezv7nPHssn6POiMY-5DlNXY_JAPfP6rkUK9IsdZgOXjPVNRZo1IOergd2Cnky5uiPRy9jT" alt="Cockatoo" />
+          </div>
+        </div>
+      </div>
+      <div class="bird-info">
+        <p><strong>Scientific Name:</strong> Cacatua galerita</p>
+        <p><strong>Physical Features:</strong> Large white bird with plumed yellow crest and dark bill. Female has red-brown eyes and male darker brown. Approx. 50 cm in length.</p>
+        <p><strong>Distribution:</strong> New Guinea, Eastern Australia, New Zealand</p>
+        <p><strong>Habitat:</strong> Tropical and subtropical rainforests</p>
+        <p><strong>Food:</strong> Seeds, buds, leaves, fruits, roots, tubers, bulbs</p>
+        <p><strong>Social Behaviors:</strong> Geophagy (eating clay to detoxify food), breeding in May–Sept in tree hollows. 2–3 eggs, 25–27 days incubation</p>
+        <p><strong>Life span:</strong> 40–80 years</p>
+      </div>
     </div>
-    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSzYaqAQuTvMS68f01tcioOloFeqHPqkOtcy8ezv7nPHssn6POiMY-5DlNXY_JAPfP6rkUK9IsdZgOXjPVNRZo1IOergd2Cnky5uiPRy9jT" alt="Sulphur-Crested Cockatoo">
   </section>
 
-  <section id="macaw" class="bird">
-    <div>
-      <h2>Blue Gold Macaw</h2>
-      <p><strong>Scientific Name:</strong> Ara ararauna</p>
-      <p><strong>Habitat:</strong> South American tropical forests</p>
-      <p><strong>Diet:</strong> Nuts, fruits, and seeds</p>
-      <p><strong>Behavior:</strong> Very affectionate and intelligent, with the ability to mimic sounds. Known for their strong pair bonding.</p>
-      <p><strong>Interesting Fact:</strong> Their bright blue and yellow feathers make them one of the most striking birds in the parrot family.</p>
+  <section id="macaw" class="bird-section">
+    <h2>Blue-and-Yellow Macaw</h2>
+    <div class="bird-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXdx5Wlb4zulupR9zPvGtOfU-GoDmxcmFeKfBS7aKYoeom09XGtvc2dYBVgRY9GubyygQWPy7XHiL-ohizeocTxfSHTg5Hcp4pe-ManYZ9_A" alt="Macaw" />
+          </div>
+        </div>
+      </div>
+      <div class="bird-info">
+        <p><strong>Scientific Name:</strong> Ara ararauna</p>
+        <p><strong>Physical Features:</strong> Vivid with blue wings, golden underparts, green forehead, strong black beak, 33" from beak to tail, 40"+ wingspan</p>
+        <p><strong>Distribution:</strong> Venezuela to Brazil (South America)</p>
+        <p><strong>Habitat:</strong> Tropical forests, woodlands, savannas</p>
+        <p><strong>Food:</strong> Seeds, nuts, fruits</p>
+        <p><strong>Social Behaviors:</strong> Sexual maturity ~4 yrs, seasonal breeding, nests in high tree hollows. 2–3 eggs, 24–36 days incubation</p>
+        <p><strong>Life span:</strong> 30–45 years</p>
+      </div>
     </div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXdx5Wlb4zulupR9zPvGtOfU-GoDmxcmFeKfBS7aKYoeom09XGtvc2dYBVgRY9GubyygQWPy7XHiL-ohizeocTxfSHTg5Hcp4pe-ManYZ9_A" alt="Blue Gold Macaw">
-  </section>
-
-  <section id="about">
-    <h2>About This Project</h2>
-    <p>This website was created as part of my internship project to observe and study these amazing birds. The aim is to help visitors learn more about the species and appreciate their beauty and uniqueness.</p>
   </section>
 
   <footer>
-    &copy; 2025 Internship Project | Designed by Mayank
+    &copy; 2025 Internship Project | Designed by Team African_Grey_Parrot
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const sliders = document.querySelectorAll('.swiper');
+    sliders.forEach(slider => {
+      new Swiper(slider, {
+        loop: true,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      });
+    });
+  </script>
 </body>
 </html>
